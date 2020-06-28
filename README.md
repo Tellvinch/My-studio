@@ -81,5 +81,5 @@ version 1.0
 
 ## Acknowledgments
 
-* Moringa school
+* [Moringa school](https://moringaschool.com/)
 
