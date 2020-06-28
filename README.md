@@ -77,7 +77,7 @@ version 1.0
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT LICENSE](https://github.com/Tellvinch/My-studio/blob/master/License.md) file for details
+[MIT LICENSE](https://github.com/Tellvinch/My-studio/blob/master/License.md)
 
 ## Acknowledgments
 
