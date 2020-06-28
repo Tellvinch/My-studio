@@ -1,66 +1,67 @@
-# Project Title
+# My-studio
 
-One Paragraph of project description goes here
+My personal website that displays my pictures plus additional info like the location where it was taken,the description an a lot more.
 
 ## Getting Started
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+```
+cd testing-deploy/
+```
+activate virtual environment
+
+  ```
+  source virtual/bin/activate
+  ```
+run the application
+
+```python3.6 manage.py runserver
+```
+See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+No installs needed.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+The following are a step by step series of examples that tell you how to get a development env running:
 
 ```
-Give the example
+git clone repo
 ```
-
-And repeat
-
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+cd testing-deploy/
 
 ```
-Give an example
-```
+activate virtual environment
 
-### And coding style tests
+  ```
+  source virtual/bin/activate
 
-Explain what these tests test and why
+  ```
+run the application
 
 ```
-Give an example
+python3.6 manage.py runserver
+
 ```
+See deployment for notes on how to deploy the  project on a live system.
+
+
+
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+For deployment to heroku click on this [link](https://gist.github.com/newtonkiragu/42f2500e56d9c2375a087233587eddd0)
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Python3.6](https://www.python.org/) - Python is a programming language that lets you work quickly
+and integrate systems more effectively
+* [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid    development and clean, pragmatic design
+* [postgresql](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and perform
 
 ## Contributing
 
@@ -68,17 +69,15 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+version 1.0 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+*Tellvinch imani [More info](https://github.com/Tellvinch)
 
 ## License
 
-This project is licensed under the MIT License - see the [MIT LICENSE](https://github.com/Tellvinch/chance01/blob/master/License.md) file for details
+This project is licensed under the MIT License - see the [MIT LICENSE](https://github.com/Tellvinch/My-studio/blob/master/License.md) file for details
 
 ## Acknowledgments
 
