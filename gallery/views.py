@@ -1,12 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http  import HttpResponse,Http404
 import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to My-studio')
+    return render(request, 'welcome.html')
 def todays_picture(request):
     date = dt.date.today()
+    return render(request, 'all-pictures/todayspic.html', {"date": date,})
+
     day = convert_dates(date)
 
 
@@ -39,7 +41,7 @@ def past_days_pictures(request,past_date):
     except ValueError:
         # Raise 404 error when ValueError is thrown
         raise Http404()
-    
+
     # Converts data from the string Url
     date = dt.datetime.strptime(past_date,'%Y-%m-%d').date()
 
