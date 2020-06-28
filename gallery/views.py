@@ -9,18 +9,6 @@ def todays_picture(request):
     date = dt.date.today()
     return render(request, 'all-pictures/todayspic.html', {"date": date,})
 
-    day = convert_dates(date)
-
-
-    html = f'''
-        <html>
-            <body>
-                <h1>Pictures for {day} {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
-
 def convert_dates(dates):
 
     # Function that gets the weekday number for the date.
