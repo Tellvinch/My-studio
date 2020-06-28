@@ -77,7 +77,7 @@ version 1.0
 
 ## License
 
-[MIT LICENSE](https://github.com/Tellvinch/My-studio/blob/master/License.md)
+[MIT LICENSE](https://github.com/Tellvinch/My-studio/blob/master/LICENSE.md)
 
 ## Acknowledgments
 
