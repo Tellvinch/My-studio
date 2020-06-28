@@ -20,7 +20,7 @@ def convert_dates(dates):
     day = days[day_number]
     return day
 
-def past_days_pictures(request,past_date):
+def past_days_pictures(request, past_date):
 
     try:
         # Converts data from the string Url
@@ -34,7 +34,7 @@ def past_days_pictures(request,past_date):
     if date == dt.date.today():
         return redirect(todays_picture)
 
-    return render(request, 'all-news/pastpics.html', {"date": date})
+    return render(request, 'all-pictures/pastpics.html', {"date": date})
 
 
 
