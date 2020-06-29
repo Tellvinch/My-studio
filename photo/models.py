@@ -20,7 +20,7 @@ class Category(models.Model):
         self.save()
 
 class Images(models.Model):
-    image_path = models.ImageField(upload_to='image/')
+    image_path = models.ImageField(upload_to='images/')
     name = models.CharField(max_length=30)
     description = models.CharField(max_length=100)
     pub_date = models.DateTimeField(auto_now_add=True)

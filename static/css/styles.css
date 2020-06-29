@@ -1,0 +1,23 @@
+.content {
+font-family: sans-serif;
+}
+.container-full{
+  overflow-x: hidden;
+}
+
+.banner{
+  background-image: url(../images/n.jpg);
+  height: 100vh;
+  background-repeat: initial;
+  background-position:right;
+}
+
+.overlay{
+  background-color: black;
+  opacity: 0.8;
+  height: 100vh;
+}
+
+.intro{
+  margin-top: 18%;
+}
