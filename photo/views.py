@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http  import HttpResponse
+from django.http import HttpResponse, Http404
+from django.templatetags.static import static
 from .models import Images, Location, Category
+from django.db.models.query import QuerySet
 
 
 

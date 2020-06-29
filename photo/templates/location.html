@@ -1,0 +1,27 @@
+{% include 'base.html' %}
+
+{% block content %}
+  <div class="row container-fluid content">
+    <div class="col-md-4">
+      <h1 class="mt-5">Location:</h1>
+      {% for image in images %}
+        <h1 class="ml-5">{{image.location}}</h1>
+      {% endfor %}
+    </div>
+    <div class="col-md-4">
+      <div class="card mt-3">
+        {% if images %}
+          {% for image in images  %}
+          <img src="/photo{{image.image_path.url}}" class="img-responsive btn btn-outline-info" alt="Location_Image">
+          <p>{{image.name}}</p>
+          <p>{{image.description}}</p>
+          <p>{{image.category}}</p>
+          <p>Posted on {{image.pub_date}}</p>
+          {% endfor %}
+        {% else %}
+          <p>The image with that location nolonger exists</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
