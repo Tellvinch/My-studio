@@ -1,43 +1,41 @@
-from django.shortcuts import render
-from .models import Images
-
-# Create your views here.
-
 def index(request):
-    images = Image.get_images()
-    a = images[0::4]
-    b = images[1::4]
-    c = images[2::4]
-    d = images[3::4]
-    return render(request, 'index.html',locals())
+    images = Images.objects.all()
+    location = Location.objects.all()
+    context = {
+        "images":images,
+        "location":location,
+    }
+    return render(request, 'index.html', context)
 
+def images(request, images_id):
+    try:
+        images = Images.objects.get(id = images_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"gall/gallery.html", {"images":images})
 
-def image(request,image_id):
-    image = Image.objects.get(id=image_id)
-    return render (request, 'image.html', {"image":image})
+def search_image(request):
+    if 'images' in request.GET and request.GET['images']:
+        search_term = request.GET["images"]
+        searched_images = Images.search_by_category(search_term)
+        message = f'{search_term}'
+        location = Location.objects.all()
+        context = {
+            "location":location,
+            "message":message,
+            "images":searched_images
+        }
+        return render(request, 'gall/search.html',context)
 
+    else:
+        message = "You haven't searched for any image"
+        return render(request, 'gall/search.html', {"message":message})
 
-def search_results(request):
-
-   if 'image' in request.GET and request.GET["image"]:
-       search_term = request.GET.get("image")
-       searched_images = Image.search_by_name(search_term)
-       a = searched_images[0::4]
-       b = searched_images[1::4]
-       c = searched_images[2::4]
-       d = searched_images[3::4]
-       message = f"{search_term}"
-
-       return render(request, 'search.html',{"message":message,"searched_images": searched_images}, locals())
-
-   else:
-       message = "You haven't searched for any term"
-       return render(request, 'search.html',{"message":message})
-
-def get_location(request,location):
-   images = Image.filter_location(location)
-   return render(request,'location.html',locals())
-
-def get_category(request,category):
-   image = Image.filter_category(category)
-   return render(request,'category.html',locals())
+def display_by_location(request, id):
+    location = Location.objects.all()
+    images = Images.objects.filter(location__id=id)
+    context = {
+        "location":location,
+        "images":images,
+    }
+    return render(request, "location.html", context)
