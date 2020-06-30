@@ -22,7 +22,7 @@ SECRET_KEY = '9)ewots#)l)o#*n!955+=y=$e=&pub-a*cdwvjh5uh98f3)7*d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # Application definition
