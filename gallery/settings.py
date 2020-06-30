@@ -115,7 +115,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'studio3',
         'USER': 'tellvinch',
-    'PASSWORD':'database',
+        'PASSWORD':'database',
     }
 }
 
