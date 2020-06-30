@@ -54,7 +54,7 @@ STATIC_URL = '/static/'
 SECRET_KEY = '#3*jk^ztvde@f31_83f_ljn3cz9cfwl6$e_sma^na@r_u)zxl5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
